@@ -8,23 +8,41 @@
     <meta name="author" content="Svea Damberg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
+    <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
+
 </head>
 
 <body>
     <div class="container">
-        <!--testing-->
-        <header>Universitetsbiblioteket</header>
+
+        <header>
+            <div class="dropdown">
+                <i class="fa-solid fa-bars"></i>
+                <div class="dropdown-content">
+                    <div class="dropdown-content">
+                        <a href="Meny/account.html">Mitt konto</a>
+                        <a href="Meny/loans.html">Mina lån</a>
+                        <a href="Meny/saved.html">Mina sparade</a>
+                    </div>
+                </div>
+            </div>
+            <h1>Universitetsbiblioteket</h1>
+            <div class="dropdown"><i class="fa-regular fa-user" id="user"></i></div>
+        </header>
 
         <div class="content-area" id="search-and-filter">
             <div id="search">Sök</div>
             <div id="filterbutton">Filtrera</div>
             <div id="active-filters">Aktivt filter 1</div>
+            <div id="active-filters">Aktivt filter 1</div>
+
         </div>
 
         <div class=content-area id="items">
-            <div class="item" id="item1">Den nya affärsredovisningen</div>
+            <div class="item" id="item1"><a href="title.html">Den nya affärsredovisningen</a></div>
         </div>
-        
+
         <footer>Footer</footer>
     </div>
 </body>
