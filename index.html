@@ -17,33 +17,77 @@
     <div class="container">
 
         <header>
-            <div class="dropdown">
-                <i class="fa-solid fa-bars"></i>
-                <div class="dropdown-content">
-                    <div class="dropdown-content">
-                        <a href="Meny/account.html">Mitt konto</a>
-                        <a href="Meny/loans.html">Mina lån</a>
-                        <a href="Meny/saved.html">Mina sparade</a>
-                    </div>
+            <nav>
+                <div class="dropdown" id="hamburger-menu">
+                    <button type="button" aria-label="Öppna meny"><i class="fa-solid fa-bars"></i></button>
+                    <ul class="dropdown-content" id="hamburger-content">
+                        <li><a href="Meny/account.html">Mitt konto</a></li>
+                        <li><a href="Meny/loans.html">Mina lån</a></li>
+                        <li><a href="Meny/saved.html">Mina sparade</a></li>
+                    </ul>
                 </div>
-            </div>
-            <h1>Universitetsbiblioteket</h1>
-            <div class="dropdown"><i class="fa-regular fa-user" id="user"></i></div>
+
+                <h1 class="main-text"><a href="index.html">Universitetsbiblioteket</a></h1>
+
+                <div class="dropdown">
+                    <button type="button" aria-label="Öppna profilmeny"><i class="fa-regular fa-user"></i></button>
+                </div>
+            </nav>
         </header>
 
-        <div class="content-area" id="search-and-filter">
-            <div id="search">Sök</div>
-            <div id="filterbutton">Filtrera</div>
-            <div id="active-filters">Aktivt filter 1</div>
-            <div id="active-filters">Aktivt filter 1</div>
+        <div class="content-area" id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
+            <input type="text" placeholder="Sök..." id="search">
+
+            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Språk</button>
+            </div>
+            <div class="active-filters"><button class="search-filter-button" type="button"
+                    aria-label="">Utgivningsår</button></div>
+
+            <div class="dropdown" id="filter-dropdown">
+                <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
+                        class="fa-solid fa-sliders"></i>Filtrera</button>
+                <ul class="dropdown-content" id="filter-content">
+                    <li class="filter-item">
+                        <button type="button" aria-label="">Tillgänglighet<i
+                                class="fa-solid fa-angle-down"></i></button>
+                        <ul>
+                            <li><label><input type="checkbox">Online</label></li>
+                            <li><label><input type="checkbox">På plats</label></li>
+                        </ul>
+                    </li>
+
+                    <li class="filter-item">
+                        <button type="button" aria-label="">Språk<i class="fa-solid fa-angle-down"></i></button>
+                        <ul>
+                            <li><label><input type="checkbox">Svenska</label></li>
+                            <li><label><input type="checkbox">Engelska</label></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
         </div>
 
-        <div class=content-area id="items">
-            <div class="item" id="item1"><a href="title.html">Den nya affärsredovisningen</a></div>
+        <div class="content-area" id="items">
+            <a href="Titlar/title.html" class="title">
+                <div>
+                    <h3>Den nya affärsredovisningen</h3>
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h4>Arvidsson, Per...</h4>
+                    <h4>3 versioner finns -></h4>
+                </div>
+            </a>
+            <a href="Titlar/title" class="title">
+                <div>
+                    <h3>Den nya affärsredovisningen</h3>
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h4>Thomasson, Jan...</h4>
+                    <h4>15 versioner finns -></h4>
+                </div>
+            </a>
         </div>
 
-        <footer>Footer</footer>
+        <footer>Något innehåll</footer>
     </div>
 </body>
 
