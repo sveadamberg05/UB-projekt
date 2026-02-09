@@ -7,15 +7,38 @@
     <meta name="description" content="Universitetsbibliotekets förbättrade sökfunktion">
     <meta name="author" content="Svea Damberg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script> <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
+    <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
+
 </head>
 
 <body>
     <div class="container">
         <header>
-            <div class="dropdown"><i class="fa-solid fa-bars"></i></div>
-            <h1>Universitetsbiblioteket</h1>
+            <nav>
+                <div class="left">
+                    <div class="dropdown">
+                        <button type="button" aria-label="Öppna meny"><i class="fa-solid fa-bars"></i></button>
+                        <ul class="dropdown-content" id="hamburger-content">
+                            <li><a href="../Meny/account.html">Mitt konto</a></li>
+                            <li><a href="../Meny/loans.html">Mina lån</a></li>
+                            <li><a href="../Meny/saved.html">Mina sparade</a></li>
+                        </ul>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <h1 class="main-text"><a href="../index.html">Bibliotek</a></h1>
+                </div>
+
+                <a href="../index.html"><img id="logo" src="../Bilder/umu_logga-modified.png"
+                        alt="Umeå Universitet Logga"></a>
+
+                <div class="right">
+                    <div class="dropdown">
+                        <button type="button" aria-label="Öppna profilmeny"><i class="fa-regular fa-user"></i></button>
+                    </div>
+                </div>
+            </nav>
         </header>
 
         <div class="content-area" id="search-and-filter">
@@ -26,13 +49,13 @@
         </div>
 
         <div class=content-area>
-            <div class="editions"><a href="Upplagor/upplaga22.html">Upplaga 22</a>
+            <div class="editions"><a href="../Upplagor/upplaga22.html">Upplaga 22</a>
 
             </div>
-            <div class="editions"><a href="Upplagor/upplaga21.html">Upplaga 21</a>
+            <div class="editions"><a href="../Upplagor/upplaga21.html">Upplaga 21</a>
 
             </div>
-            <div class="editions"><a href="Upplagor/upplaga20.html">Upplaga 20</a>
+            <div class="editions"><a href="../Upplagor/upplaga20.html">Upplaga 20</a>
 
             </div>
 
@@ -41,4 +64,5 @@
         <footer>Footer</footer>
     </div>
 </body>
+
 </html>

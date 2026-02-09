@@ -39,17 +39,34 @@ footer {
 
 nav {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
 
 }
 
-/* hamburgermeny*/
-
-#hamburger-menu {
-    border-right: 3px white solid;
-    margin-right: 0.5em;
+.left,
+.right {
+    display: flex;
+    align-items: center;
 }
+
+.left {
+    justify-self: start;
+}
+
+.right {
+    justify-self: end;
+    align-items: center;
+}
+
+#logo {
+    height: 3em;
+    width: 3em;
+    justify-self: center;
+
+}
+
+/* hamburgermeny*/
 
 .dropdown-content {
     display: none;
@@ -58,21 +75,22 @@ nav {
     background-color: #F6F6F6;
 }
 
+.dropdown:hover .dropdown-content {
+    /* gör klickbar med javascript sedan*/
+    display: block;
+}
+
 #hamburger-content {
-    min-width: 70vw; /* ändra för större skärmar sedan*/
+    min-width: 60vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #hamburger-content a {
-    text-align: left;
+    display: block;
     padding: 1em;
-    display: block;
     color: black;
-}
-
-.dropdown:hover .dropdown-content {
-    /* gör klickbar med javascript sedan*/
-    display: block;
+    text-align: left;
+    border-bottom: 1px solid #999;
 }
 
 header button {
@@ -82,23 +100,27 @@ header button {
     color: white;
 }
 
-i {
-    font-size: 30px;
-    text-align: none;
-}
-
 /* text osv*/
 
-h1 {
-    text-align: left;
-    font-size: 24px;
+.vertical-line {
+    border-left: 3px solid white;
+    height: 3em;
+    border-radius: 2px;
+}
 
+h1 {
+    font-size: 20px;
+    padding: 0 0.5em;
 }
 
 h1 a {
     color: white;
 }
 
+i {
+    font-size: 30px;
+    text-align: none;
+}
 
 /* ------------------Sök och filtreringsområdet--------------------------- */
 #search-and-filter {
@@ -138,7 +160,7 @@ h1 a {
 #filter-content {
     text-align: left;
     right: 0;
-    box-shadow: 0 0 8px 4px  rgba(0, 0, 0, 0.2), 0 0 20px 6px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2), 0 0 20px 6px rgba(0, 0, 0, 0.19);
 }
 
 #filter-content li {
@@ -181,4 +203,3 @@ h1 a {
 .content-area a {
     color: black;
 }
-
