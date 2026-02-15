@@ -23,10 +23,21 @@ a:focus {
 /* ------------------CSS grid grejer--------------------------- */
 .container {
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
     grid-template-columns: auto;
     min-height: 100vh;
 }
+
+#main {
+    grid-template-rows: auto auto 1fr auto;
+
+}
+
+#contact {
+    grid-template-rows: auto auto 1fr auto;
+
+}
+
+#menu {}
 
 .content-area {
     padding: 1em;
@@ -213,6 +224,32 @@ i {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    align-items: center;
+}
+
+footer,
+footer a {
+    color: white;
+}
+
+.footer-text,
+.footer-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.footer-text{
+    text-align: left;
+}
+
+.footer-text i {
+    font-size: 1em;
+}
+
+.footer-icons {
+    text-align: right;
 }
 
 /*------------------------Upplagor------------------------------------------------*/
@@ -243,42 +280,42 @@ footer {
 }
 
 /*--------------------------------Meny------------------------------------------------*/
-#construction {
+#menu {
     gap: 1em 1em;
 }
 
 
-#construction .content-area {
+#menu .content-area {
     margin: 1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#construction .content-area i{
+#menu .content-area i {
     font-size: 4em;
     text-align: center;
     margin: auto;
-    
+
 }
 
-.circle  {
+.circle {
     width: 7em;
     height: 7em;
     border: 5px solid #999;
     border-radius: 50%;
 }
 
-#construction  h2 {
+#menu h2 {
     padding: 0 1em;
     text-align: left;
-    
+
 }
 
-#construction .content-area h2  {
+#menu .content-area h2 {
     text-decoration: underline;
 }
 
 
-#construction h3 {
+#menu h3 {
     font-weight: normal;
 }
 
