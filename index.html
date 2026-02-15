@@ -43,31 +43,38 @@
         </header>
 
         <div class="content-area" id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
-            <input type="text" placeholder="Sök..." id="search">
+            <form> <!-- formulär utan action -->
+                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." id="search"
+                    name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
 
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Språk</button></div>
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Utgivningsår</button></div>
+            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Språk</button>
+            </div>
+            <div class="active-filters"><button class="search-filter-button" type="button"
+                    aria-label="">Utgivningsår</button></div>
 
-            <div class="dropdown" id="filter-dropdown">
+            <div class="dropdown">
                 <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
                         class="fa-solid fa-sliders"></i>Filtrera</button>
                 <ul class="dropdown-content" id="filter-content">
+
                     <li class="filter-item">
                         <button type="button" aria-label="">Tillgänglighet<i
                                 class="fa-solid fa-angle-down"></i></button>
-                        <ul>
+                        <ul class="dropdown-content">
                             <li><label><input type="checkbox">Online</label></li>
                             <li><label><input type="checkbox">På plats</label></li>
                         </ul>
                     </li>
-
                     <li class="filter-item">
-                        <button type="button" aria-label="">Språk<i class="fa-solid fa-angle-down"></i></button>
-                        <ul>
+                        <button type="button" aria-label="Språk">Språk<i class="fa-solid fa-angle-down"></i></button>
+                        <ul class="dropdown-content">
                             <li><label><input type="checkbox">Svenska</label></li>
                             <li><label><input type="checkbox">Engelska</label></li>
                         </ul>
                     </li>
+
                 </ul>
             </div>
 
@@ -75,24 +82,48 @@
 
         <div class="content-area" id="items">
             <a href="Titlar/title.html" class="title">
-                    <h3>Den nya affärsredovisningen</h3>
-                    <i class="fa-solid fa-layer-group"></i>
-                    <h4>Arvidsson, Per...</h4>
-                    <h4>3 versioner finns -></h4>
+                <h3>Den nya affärsredovisningen</h3>
+                <i class="fa-solid fa-layer-group"></i>
+                <h4>Arvidsson, Per...</h4>
+                <h4>3 versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
             </a>
             <a href="Titlar/title" class="title">
-                    <h3>Den nya affärsredovisningen</h3>
-                    <i class="fa-solid fa-layer-group"></i>
-                    <h4>Thomasson, Jan...</h4>
-                    <h4>15 versioner finns -></h4>
+                <h3>Den nya affärsredovisningen</h3>
+                <i class="fa-solid fa-layer-group"></i>
+                <h4>Thomasson, Jan...</h4>
+                <h4>15 versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
             </a>
 
-            <a href="" class="title"></a>
-            <a href="" class="title"></a>
+            <a href="" class="title">
+                <h3>Den nya affärsredovisningen</h3>
+                <i class="fa-solid fa-layer-group"></i>
+                <h4>Efternamn, Förnamn
+                    <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
+            </a>
+            <a href="" class="title">
+                <h3>Den nya affärsredovisningen</h3>
+                <i class="fa-solid fa-layer-group"></i>
+                <h4>Efternamn, Förnamn
+                    <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
+            </a>
 
         </div>
 
-        <footer>Något innehåll</footer>
+        <footer>
+            <div class="footer-text">
+                <p>Umeå Universitet</p>
+                <p>901 87 Umeå</p>
+                <a href="contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="footer-icons">
+                <i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com"
+                    aria-label="Facebook">Facebook</a>
+                <i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com"
+                    aria-label="Instagram">Instagram</a>
+                <i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com"
+                    aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </footer>
     </div>
 </body>
 
