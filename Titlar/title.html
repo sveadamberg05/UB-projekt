@@ -41,24 +41,54 @@
             </nav>
         </header>
 
-        <div class="content-area" id="search-and-filter">
-            <div id="search">Sök</div>
-            <div id="filterbutton">Filtrera</div>
-            <div id="active-filters">Aktivt filter 1</div>
-            <div id="active-filters">Aktivt filter 1</div>
+        <div class="content-area" id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
+            <input type="text" placeholder="Sök..." id="search">
+
+            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Språk</button>
+            </div>
+            <div class="active-filters"><button class="search-filter-button" type="button"
+                    aria-label="">Utgivningsår</button></div>
+
+            <div class="dropdown" id="filter-dropdown">
+                <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
+                        class="fa-solid fa-sliders"></i>Filtrera</button>
+                <ul class="dropdown-content" id="filter-content">
+                    <li class="filter-item">
+                        <button type="button" aria-label="">Tillgänglighet<i
+                                class="fa-solid fa-angle-down"></i></button>
+                        <ul>
+                            <li><label><input type="checkbox">Online</label></li>
+                            <li><label><input type="checkbox">På plats</label></li>
+                        </ul>
+                    </li>
+
+                    <li class="filter-item">
+                        <button type="button" aria-label="">Språk<i class="fa-solid fa-angle-down"></i></button>
+                        <ul>
+                            <li><label><input type="checkbox">Svenska</label></li>
+                            <li><label><input type="checkbox">Engelska</label></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class=content-area>
-            <div class="editions"><a href="../Upplagor/upplaga22.html">Upplaga 22</a>
-
-            </div>
-            <div class="editions"><a href="../Upplagor/upplaga21.html">Upplaga 21</a>
-
-            </div>
-            <div class="editions"><a href="../Upplagor/upplaga20.html">Upplaga 20</a>
-
-            </div>
-
+        <div class="content-area" id="items">
+            <a href="../Upplagor/upplaga22.html" >
+                <div class="edition">
+                    <img src="../Bilder/upplaga22.jpg" alt="Upplaga 22">
+                    <h3>Upplaga 22 - Den nya affärsredovisningen</h3>
+                    <h4 class="available"><i class="fa-solid fa-circle-check"></i>Tillgänglig</h4>
+                </div>
+            </a>
+            <a href="../Upplagor/upplaga21.html">
+                <div class="edition">
+                    <img src="../Bilder/upplaga22.jpg" alt="Upplaga 21">
+                    <h3>Upplaga 21 - Den nya affärsredovisningen</h3>
+                    <h4 class="non-available"><i class="fa-solid fa-circle-xmark"></i>Utlånad</h4>
+                </div>
+            </a>
         </div>
 
         <footer>Footer</footer>
