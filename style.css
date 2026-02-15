@@ -37,7 +37,9 @@ a:focus {
 
 }
 
-#menu {}
+#menu {
+    grid-template-rows: auto 1fr auto;
+}
 
 .content-area {
     padding: 1em;
@@ -240,7 +242,7 @@ footer a {
     gap: 0.5em;
 }
 
-.footer-text{
+.footer-text {
     text-align: left;
 }
 
@@ -280,45 +282,20 @@ footer a {
 }
 
 /*--------------------------------Meny------------------------------------------------*/
-#menu {
-    gap: 1em 1em;
-}
-
-
-#menu .content-area {
-    margin: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#menu .content-area i {
-    font-size: 4em;
-    text-align: center;
-    margin: auto;
-
-}
-
-.circle {
-    width: 7em;
-    height: 7em;
-    border: 5px solid #999;
-    border-radius: 50%;
-}
 
 #menu h2 {
-    padding: 0 1em;
     text-align: left;
-
 }
 
-#menu .content-area h2 {
-    text-decoration: underline;
+#menu-content {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 2em;
 }
 
-
-#menu h3 {
-    font-weight: normal;
+.menu-item {
+    background-color: lightgrey;
 }
-
 
 /*-------------------------------Reponsivitet-----------------------------------------*/
 /*enligt bootstraps breakpoints*/
