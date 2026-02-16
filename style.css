@@ -240,6 +240,10 @@ form.search button:hover {
     font-size: 1em;
 }
 
+#breadcrumb .prev {
+    text-decoration: underline;
+}
+
 #items {
     display: grid;
     gap: 2em;
@@ -318,7 +322,6 @@ form.search button:hover {
     text-align: left;
     gap: 0.5em;
     padding: 1.5em;
-
 }
 
 #book-data h1 {
@@ -326,12 +329,22 @@ form.search button:hover {
     padding: 0;
 }
 
-
 .edition-main {
     display: grid;
     gap: 1em;
 }
 
+.edition-main .image {
+    height: 18em;
+    width: 14em;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.edition-main img {
+    width: 100%;
+    height: 100%;
+}
 
 .location {
     display: grid;
@@ -366,6 +379,11 @@ strong {
     margin-right: 0.25em;
 }
 
+.avail-area {
+    background-color: #F6F6F6;
+    padding: 1em;
+}
+
 th {
     border-bottom: 1px solid black;
 }
@@ -395,7 +413,6 @@ td {
 
 
 /*---------------------------Footer------------------------------------------------*/
-
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -478,6 +495,42 @@ footer a {
     background-color: lightgrey;
 }
 
+/*---------------------------Kontakt----------------------------------------------------*/
+#contact form {
+    padding: 1em;
+    background-color: white;
+    text-align: left;
+    display: block;
+}
+
+#contact input[type=text],
+textarea,
+#contact input[type=email] {
+    padding: 1em;
+    border-radius: 4px;
+    color: #999;
+    border: 2px solid lightgray;
+    display: inline-block;
+    width: 100%;
+    margin: 0.5em 0 1em 0;
+}
+
+#message {
+    height: 8em;
+    font-family: inherit;
+}
+
+
+
+#contact input[type=submit] {
+    padding: 1em;
+    border-radius: 4px;
+    background-color: #2A4765;
+    color: white;
+    width: 100%;
+}
+
+
 /*-------------------------------Reponsivitet-----------------------------------------*/
 /*enligt bootstraps breakpoints*/
 @media only screen and (min-width: 576px) {
@@ -496,6 +549,10 @@ footer a {
         gap: 0.5em;
     }
 
+    #availability {
+        grid-column: 1/3;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -507,6 +564,11 @@ footer a {
     .active-filters {
         grid-row: 2/2;
     }
+
+    .edition-main {
+        grid-template-columns: auto 1fr;
+    }
+
 }
 
 

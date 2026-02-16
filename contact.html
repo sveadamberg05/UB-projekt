@@ -15,7 +15,6 @@
 
 <body>
     <div class="container" id="contact">
-
         <header>
             <nav>
                 <div class="left">
@@ -43,7 +42,7 @@
         </header>
 
         <div class="content-area" id="breadcrumb">
-            <a href="../index.html">Start</a><i class="fa-solid fa-angle-right"></i>
+            <a href="../index.html"><p class="prev">Start</p></a><i class="fa-solid fa-angle-right"></i>
             <p>Kontakta oss</p>
         </div>
         <div class="content-area">
@@ -54,9 +53,12 @@
                 <label for="lname">Efternamn</label>
                 <input type="text" id="lname" name="lname" placeholder="Efternamn">
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+
                 <label for="subject">Ämne</label><input type="text" id="subject" name="subject" placeholder="Ämne">
-                <label for="message">Meddelande</label><input type="message" id="message" name="message"
-                    placeholder="Meddelande">
+                <label for="message">Meddelande</label><textarea id="message" name="message"
+                    placeholder="Meddelande"></textarea>
 
                 <input type="submit" value="Skicka">
 
