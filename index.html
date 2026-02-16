@@ -43,37 +43,37 @@
         </header>
 
         <div class="content-area" id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
-            <form> <!-- formulär utan action -->
-                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." id="search"
-                    name="search">
+            <form class="search"> <!-- formulär utan action -->
+                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
 
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Språk</button>
+            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"Svenska"<i class="fa-solid fa-square-xmark"></i></button>
             </div>
             <div class="active-filters"><button class="search-filter-button" type="button"
-                    aria-label="">Utgivningsår</button></div>
+                    aria-label="">"På plats"<i class="fa-solid fa-square-xmark"></i></button></div>
 
             <div class="dropdown">
                 <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
                         class="fa-solid fa-sliders"></i>Filtrera</button>
                 <ul class="dropdown-content" id="filter-content">
 
-                    <li class="filter-item">
-                        <button type="button" aria-label="">Tillgänglighet<i
-                                class="fa-solid fa-angle-down"></i></button>
-                        <ul class="dropdown-content">
-                            <li><label><input type="checkbox">Online</label></li>
+                    <li class="filter-dropdown">
+                        <button>Tillgänglighet<i class="fa-solid fa-angle-down"></i></button>
+                        <ul class="filter-inner-dropdown-content">
                             <li><label><input type="checkbox">På plats</label></li>
+                            <li><label><input type="checkbox">Online</label></li>
                         </ul>
                     </li>
-                    <li class="filter-item">
-                        <button type="button" aria-label="Språk">Språk<i class="fa-solid fa-angle-down"></i></button>
-                        <ul class="dropdown-content">
+
+                    <li class="filter-dropdown">
+                        <button>Språk<i class="fa-solid fa-angle-down"></i></button>
+                        <ul class="filter-inner-dropdown-content">
                             <li><label><input type="checkbox">Svenska</label></li>
                             <li><label><input type="checkbox">Engelska</label></li>
                         </ul>
                     </li>
+
 
                 </ul>
             </div>
@@ -83,28 +83,28 @@
         <div class="content-area" id="items">
             <a href="Titlar/title.html" class="title">
                 <h3>Den nya affärsredovisningen</h3>
-                <i class="fa-solid fa-layer-group"></i>
+                <i class="fa-solid fa-book editions-icon"></i>
                 <h4>Arvidsson, Per...</h4>
-                <h4>3 versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
+                <h4>3 versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></h4>
             </a>
-            <a href="Titlar/title" class="title">
+            <a href="" class="title">
                 <h3>Den nya affärsredovisningen</h3>
-                <i class="fa-solid fa-layer-group"></i>
-                <h4>Thomasson, Jan...</h4>
-                <h4>15 versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
+                <i class="fa-solid fa-book editions-icon"></i>
+                <h4>Efternamn, Förnamn</h4>
+                <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></h4>
             </a>
 
             <a href="" class="title">
                 <h3>Den nya affärsredovisningen</h3>
-                <i class="fa-solid fa-layer-group"></i>
-                <h4>Efternamn, Förnamn
-                    <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
+                <i class="fa-solid fa-book editions-icon"></i>
+                <h4>Efternamn, Förnamn</h4>
+                <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></h4>
             </a>
             <a href="" class="title">
                 <h3>Den nya affärsredovisningen</h3>
-                <i class="fa-solid fa-layer-group"></i>
-                <h4>Efternamn, Förnamn
-                    <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right"></i></h4>
+                <i class="fa-solid fa-book editions-icon"></i>
+                <h4>Efternamn, Förnamn</h4>
+                <h4>X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></h4>
             </a>
 
         </div>

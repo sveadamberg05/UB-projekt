@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="books">
         <header>
             <nav>
                 <div class="left">
@@ -29,7 +29,6 @@
                     <div class="vertical-line"></div>
                     <h1 class="main-text"><a href="../index.html">Bibliotek</a></h1>
                 </div>
-
                 <a href="../index.html"><img id="logo" src="../Bilder/umu_logga-modified.png"
                         alt="Umeå Universitet Logga"></a>
 
@@ -41,11 +40,80 @@
             </nav>
         </header>
 
+        <div class="content-area" id="breadcrumb">
+            <a href="../index.html">Resultat</a><i class="fa-solid fa-angle-right"></i><a
+                href="../Titlar/title.html">Upplagor</a><i class="fa-solid fa-angle-right"></i>
+            <p>Upplaga 22</p>
+        </div>
+
+        <div class="content-area edition-main">
+            <div id="edition-image"><img src="../Bilder/upplaga22.jpg"></div>
+            <div id="book-data">
+                <p>Bok • Kursbok</p>
+                <h1>Den nya affärsredovisningen</h1>
+                <p>Författare: Arvidson, Per; Carrington, Thomas; Johed, Gustav; Nordlund, Isabella</p>
+                <p>2021 • Upplaga 21 </p>
+                <p>International standard number (ISBN): 9789147144051</p>
+            </div>
+
+            <div id="availability">
+                <div class="location">
+                    <h2>Universitetsbiblioteket</h2><a href="https://maps.ub.umu.se/sv?cn=Arvidson%2C+P&col=KURS&lib=UB&sysid=%28SE-LIBR%293h9k12z71gmskq75"><p>Se karta</p><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+                <div class="avail-text">Boken finns i samlingen<strong> Kursbok</strong>, med placeringen <strong>Arvidson, P.</strong></div>
+                <div class="avail-area">
+                    <table>
+                        <tr>
+                            <th id="status">Status</th>
+                            <th>Lånetid</th>
+                        </tr>
+                        <tr>
+                            <td id="status"><i class="fa-solid fa-circle-check semi-available"></i>Referensexemplar</td>
+                            <td>Ej hemlån</td>
+                        </tr>
+                        <tr>
+                            <td id="status"><i class="fa-solid fa-circle-check available" ></i>På hyllan - kan reserveras</td>
+                            <td>2 veckor</td>
+                        </tr>
+                        <tr>
+                            <td id="status"><i class="fa-solid fa-circle-xmark non-available"></i>Utlånad till 2026-03-05</td>
+                            <td>2 veckor</td>
+                        <tr>
+                            <td id="status"><i class="fa-solid fa-circle-xmark non-available"></i>Utlånad till 2026-03-10</td>
+                            <td>2 veckor</td>
+                        <tr>
+                    </table>
+                    <button type="submit" id="available"><h4>Reservera</h4></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area edition-extra">
+            <div class="dropdown edition-dropdowns">
+                <h2>Mer information</h2><i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <p>Information</p>
+                </div>
+            </div>
+            <div class="dropdown edition-dropdowns">
+                <h2>Hantera referenser</h2><i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <p>Information</p>
+                </div>
+            </div>
+            <div class="dropdown edition-dropdowns">
+                <h2>Kontakt och övriga länkar</h2><i class="fa-solid fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <p>Information</p>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <div class="footer-text">
                 <p>Umeå Universitet</p>
                 <p>901 87 Umeå</p>
-                <a href="contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
+                <a href="../contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
             </div>
             <div class="footer-icons">
                 <a href="https://www.facebook.com" aria-label="Facebook">Facebook <i

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="main">
         <header>
             <nav>
                 <div class="left">
@@ -47,33 +47,39 @@
         </div>
 
         <div class="content-area" id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
-            <input type="text" placeholder="Sök..." id="search">
+            <form class="search"> <!-- formulär utan action -->
+                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
 
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">Språk</button>
+            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"Svenska"<i
+                        class="fa-solid fa-square-xmark"></i></button>
             </div>
-            <div class="active-filters"><button class="search-filter-button" type="button"
-                    aria-label="">Utgivningsår</button></div>
+            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"På plats"<i
+                        class="fa-solid fa-square-xmark"></i></button></div>
 
-            <div class="dropdown" id="filter-dropdown">
+            <div class="dropdown">
                 <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
                         class="fa-solid fa-sliders"></i>Filtrera</button>
                 <ul class="dropdown-content" id="filter-content">
-                    <li class="filter-item">
-                        <button type="button" aria-label="">Tillgänglighet<i
-                                class="fa-solid fa-angle-down"></i></button>
-                        <ul>
-                            <li><label><input type="checkbox">Online</label></li>
+
+                    <li class="filter-dropdown">
+                        <button>Tillgänglighet<i class="fa-solid fa-angle-down"></i></button>
+                        <ul class="filter-inner-dropdown-content">
                             <li><label><input type="checkbox">På plats</label></li>
+                            <li><label><input type="checkbox">Online</label></li>
                         </ul>
                     </li>
 
-                    <li class="filter-item">
-                        <button type="button" aria-label="">Språk<i class="fa-solid fa-angle-down"></i></button>
-                        <ul>
+                    <li class="filter-dropdown">
+                        <button>Språk<i class="fa-solid fa-angle-down"></i></button>
+                        <ul class="filter-inner-dropdown-content">
                             <li><label><input type="checkbox">Svenska</label></li>
                             <li><label><input type="checkbox">Engelska</label></li>
                         </ul>
                     </li>
+
+
                 </ul>
             </div>
 
@@ -82,32 +88,32 @@
         <div class="content-area" id="items">
             <a href="../Upplagor/upplaga22.html">
                 <div class="edition">
-                    <img src="../Bilder/upplaga22.jpg" alt="Upplaga 22">
+                    <div class="image"><img src="../Bilder/upplaga22.jpg" alt="Upplaga 22"></div>
                     <h3>Upplaga 22 - Den nya affärsredovisningen</h3>
                     <h4 class="available"><i class="fa-solid fa-circle-check"></i>Tillgänglig</h4>
                 </div>
             </a>
             <a href="../Upplagor/upplaga21.html">
                 <div class="edition">
-                    <img src="../Bilder/upplaga21.jpg" alt="Upplaga 21">
+                    <div class="image"><img src="../Bilder/upplaga21.jpg" alt="Upplaga 21"></div>
                     <h3>Upplaga 21 - Den nya affärsredovisningen</h3>
                     <h4 class="non-available"><i class="fa-solid fa-circle-xmark"></i>Utlånad</h4>
                 </div>
             </a>
             <a href="../Upplagor/upplaga20.html">
                 <div class="edition">
-                    <img src="../Bilder/upplaga20.jpg" alt="Upplaga 20">
+                    <div class="image"><img src="../Bilder/upplaga20.jpg" alt="Upplaga 20"></div>
                     <h3>Upplaga 20 - Den nya affärsredovisningen</h3>
-                    <h4 class="non-available"><i class="fa-solid fa-circle-xmark"></i>Utlånad</h4>
+                    <h4 class="non-available"><i class="fa-solid fa-circle-xmark non-available"></i>Utlånad</h4>
                 </div>
             </a>
         </div>
 
-         <footer>
+        <footer>
             <div class="footer-text">
                 <p>Umeå Universitet</p>
                 <p>901 87 Umeå</p>
-                <a href="contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
+                <a href="../contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
             </div>
             <div class="footer-icons">
                 <a href="https://www.facebook.com" aria-label="Facebook">Facebook <i
