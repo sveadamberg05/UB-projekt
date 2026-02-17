@@ -41,7 +41,10 @@ main {
     grid-template-rows: auto 1fr auto;
 }
 
-section, #search-and-filter {
+section,
+#search-and-filter,
+#breadcrumb,
+.video {
     padding: 0 1em;
 }
 
@@ -148,6 +151,10 @@ i {
     grid-template-rows: auto auto;
     gap: 1em;
     align-items: center;
+}
+
+form h2 {
+    padding-bottom: 0.5em;
 }
 
 form.search {
@@ -299,7 +306,7 @@ form.search button:hover {
     align-items: center;
 }
 
-section a {
+section a, #breadcrumb a{
     color: black;
 }
 
@@ -372,9 +379,11 @@ strong {
 
 .avail-area {
     text-align: right;
+    background-color: #F6F6F6;
+    padding: 1em;
 }
 
-#status {
+.status {
     text-align: left;
 }
 
@@ -383,10 +392,10 @@ strong {
     margin-right: 0.25em;
 }
 
-.avail-area {
-    background-color: #F6F6F6;
-    padding: 1em;
+.avail-area h2 {
+    font-size: 18px;
 }
+
 
 th {
     border-bottom: 1px solid black;
@@ -607,7 +616,9 @@ textarea,
         print-color-adjust: exact;
     }
 
-     table, footer, .title  {
+    table,
+    footer,
+    .title {
         break-inside: avoid;
 
     }
