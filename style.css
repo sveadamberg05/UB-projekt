@@ -21,27 +21,27 @@ a:focus {
 }
 
 /* ------------------CSS grid grejer--------------------------- */
-.container {
+main {
     display: grid;
     min-height: 100vh;
     gap: 1em;
 }
 
-#main {
+.main {
     grid-template-rows: auto auto 1fr auto;
 
 }
 
-#contact {
+.contact {
     grid-template-rows: auto auto 1fr auto;
 
 }
 
-#menu {
+.menu {
     grid-template-rows: auto 1fr auto;
 }
 
-.content-area {
+section {
     padding: 0 1em;
 }
 
@@ -299,7 +299,7 @@ form.search button:hover {
     padding: 0.5em;
 }
 
-.content-area a {
+section a {
     color: black;
 }
 
@@ -440,13 +440,15 @@ footer a {
     text-align: left;
 }
 
+.footer-icons {
+    text-align: right;
+}
+
 .footer-text i {
     font-size: 1em;
 }
 
-.footer-icons {
-    text-align: right;
-}
+
 
 /*------------------------Upplagor------------------------------------------------*/
 
@@ -485,7 +487,7 @@ footer a {
 
 /*--------------------------------Meny------------------------------------------------*/
 
-#menu h2 {
+.menu h2 {
     text-align: left;
 }
 
@@ -500,16 +502,16 @@ footer a {
 }
 
 /*---------------------------Kontakt----------------------------------------------------*/
-#contact form {
+.contact form {
     padding: 1em;
     background-color: white;
     text-align: left;
     display: block;
 }
 
-#contact input[type=text],
+.contact input[type=text],
 textarea,
-#contact input[type=email] {
+.contact input[type=email] {
     padding: 1em;
     border-radius: 4px;
     color: #999;
@@ -526,7 +528,7 @@ textarea,
 
 
 
-#contact input[type=submit] {
+.contact input[type=submit] {
     padding: 1em;
     border-radius: 4px;
     background-color: #2A4765;
@@ -602,7 +604,6 @@ textarea,
 /*--------------------------PDF-----------------------------------------*/
 @media print {
     * {
-        -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 

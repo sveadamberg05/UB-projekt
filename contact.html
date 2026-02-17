@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container" id="contact">
+    <main class="contact">
         <header>
             <nav>
                 <div class="left">
@@ -41,36 +41,38 @@
             </nav>
         </header>
 
-        <div class="content-area" id="breadcrumb">
+        <section id="breadcrumb">
             <a href="../index.html">
                 <p class="prev">Start</p>
             </a><i class="fa-solid fa-angle-right"></i>
             <p>Kontakta oss</p>
-        </div>
-        <div class="video">
+        </section>
+
+        <section class="video">
             <video controls width="400px" autoplay muted>
                 <source src="Bilder/video.mp4" type="video/mp4">
             </video>
-        </div>
-        <div class="content-area">
-            <form method="get">
+        </section>
+
+        <section>
+            <form action="mailto:svea.damberg05@gmail.com" method="post" enctype="text/plain">
                 <label for="fname">Förnamn</label>
-                <input type="text" id="fname" name="fname" placeholder="Förnamn">
+                <input type="text" id="fname" name="fname" placeholder="Förnamn" required>
 
                 <label for="lname">Efternamn</label>
                 <input type="text" id="lname" name="lname" placeholder="Efternamn">
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
-                <label for="subject">Ämne</label><input type="text" id="subject" name="subject" placeholder="Ämne">
+                <label for="subject">Ämne</label><input type="text" id="subject" name="subject" placeholder="Ämne" required>
                 <label for="message">Meddelande</label><textarea id="message" name="message"
-                    placeholder="Meddelande"></textarea>
+                    placeholder="Meddelande" required></textarea>
 
                 <input type="submit" value="Skicka">
 
             </form>
-        </div>
+        </section>
 
         <footer>
             <div class="footer-text">
@@ -87,7 +89,7 @@
                         class="fa-brands fa-linkedin"></i></a>
             </div>
         </footer>
-    </div>
+    </main>
 </body>
 
 </html>
