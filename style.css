@@ -41,7 +41,7 @@ main {
     grid-template-rows: auto 1fr auto;
 }
 
-section {
+section, #search-and-filter {
     padding: 0 1em;
 }
 
@@ -260,6 +260,10 @@ form.search button:hover {
     margin: 0.25em;
 }
 
+#items h2 {
+    font-size: 20px;
+}
+
 #items p {
     font-weight: bold;
 }
@@ -269,6 +273,7 @@ form.search button:hover {
     width: 10em;
     overflow: hidden;
     margin: 0 auto;
+    padding: 0.5em 0;
 }
 
 .edition img {
@@ -292,11 +297,6 @@ form.search button:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: 1px lightgrey solid;
     align-items: center;
-}
-
-.title h3,
-.edition h3 {
-    padding: 0.5em;
 }
 
 section a {
