@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
 
 </head>
-
 <body>
     <main class="menu">
         <header>
             <nav>
                 <div class="left">
-                    <div class="dropdown">
-                        <button type="button" aria-label="Öppna meny"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dropdown" id="hamburger-menu">
+                        <button type="button" aria-label="Öppna meny">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
                         <ul class="dropdown-content" id="hamburger-content">
                             <li><a href="../Meny/account.html">Mitt konto</a></li>
                             <li><a href="../Meny/loans.html">Mina lån</a></li>
@@ -30,25 +30,25 @@
                     <div class="vertical-line"></div>
                     <h1 class="main-text"><a href="../index.html">Bibliotek</a></h1>
                 </div>
-
                 <a href="../index.html"><img id="logo" src="../Bilder/umu_logga-modified.png"
-                        alt="Umeå Universitet Logga"></a>
-
+                        alt="Umeå Universitet Logga" /></a>
                 <div class="right">
                     <div class="dropdown">
-                        <button type="button" aria-label="Öppna profilmeny"><i class="fa-regular fa-user"></i></button>
+                        <button type="button" aria-label="Öppna profilmeny">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
                     </div>
                 </div>
             </nav>
         </header>
 
         <section id="menu-content">
-            <h2>Mina Lån (under konstruktion)</h2>
+            <h2>Mina Sparade (under konstruktion)</h2>
             <div class="menu-item"></div>
             <div class="menu-item"></div>
             <div class="menu-item"></div>
         </section>
-        
+
         <footer>
             <div class="footer-text">
                 <p>Umeå Universitet</p>
@@ -65,6 +65,8 @@
             </div>
         </footer>
     </main>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

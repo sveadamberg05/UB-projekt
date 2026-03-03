@@ -1,127 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
 
 <head>
-    <title>Universitetsbibliotekets förbättrade sökfunktion</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Universitetsbibliotekets förbättrade sökfunktion">
-    <meta name="author" content="Svea Damberg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
-
+  <title>Universitetsbibliotekets förbättrade sökfunktion</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Universitetsbibliotekets förbättrade sökfunktion" />
+  <meta name="author" content="Svea Damberg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <main class="main">
-        <header>
-            <nav>
-                <div class="left">
-
-                    <div class="dropdown">
-                        <button type="button" aria-label="Öppna meny"><i class="fa-solid fa-bars"></i></button>
-                        <ul class="dropdown-content" id="hamburger-content">
-                            <li><a href="Meny/account.html">Mitt konto</a></li>
-                            <li><a href="Meny/loans.html">Mina lån</a></li>
-                            <li><a href="Meny/saved.html">Mina sparade</a></li>
-                        </ul>
-                    </div>
-                    <div class="vertical-line"></div>
-                    <h1 class="main-text"><a href="index.html">Bibliotek</a></h1>
-                </div>
-                <a href="index.html"><img id="logo" src="Bilder/umu_logga-modified.png"
-                        alt="Umeå Universitet Logga"></a>
-
-                <div class="right">
-                    <div class="dropdown">
-                        <button type="button" aria-label="Öppna profilmeny"><i class="fa-regular fa-user"></i></button>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <div id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
-            <form class="search"> <!-- formulär utan action -->
-                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"Svenska"<i
-                        class="fa-solid fa-square-xmark"></i></button>
-            </div>
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"På plats"<i
-                        class="fa-solid fa-square-xmark"></i></button></div>
-
-            <div class="dropdown">
-                <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
-                        class="fa-solid fa-sliders"></i>Filtrera</button>
-                <ul class="dropdown-content" id="filter-content">
-                    <li class="filter-dropdown">
-                        <button>Tillgänglighet<i class="fa-solid fa-angle-down"></i></button>
-                        <ul class="filter-inner-dropdown-content">
-                            <li><label><input type="checkbox">På plats</label></li>
-                            <li><label><input type="checkbox">Online</label></li>
-                        </ul>
-                    </li>
-
-                    <li class="filter-dropdown">
-                        <button>Språk<i class="fa-solid fa-angle-down"></i></button>
-                        <ul class="filter-inner-dropdown-content">
-                            <li><label><input type="checkbox">Svenska</label></li>
-                            <li><label><input type="checkbox">Engelska</label></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+  <main class="main">
+    <header>
+      <nav>
+        <div class="left">
+          <div class="dropdown" id="hamburger-menu">
+            <button type="button" aria-label="Öppna meny">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="dropdown-content" id="hamburger-content">
+              <li><a href="Meny/account.html">Mitt konto</a></li>
+              <li><a href="Meny/loans.html">Mina lån</a></li>
+              <li><a href="Meny/saved.html">Mina sparade</a></li>
+            </ul>
+          </div>
+          <div class="vertical-line"></div>
+          <h1 class="main-text"><a href="index.html">Bibliotek</a></h1>
         </div>
+        <a href="index.html"><img id="logo" src="Bilder/umu_logga-modified.png" alt="Umeå Universitet Logga" /></a>
 
-        <section id="items">
-            <a href="Titlar/title.html" class="title">
-                <h2>Den nya affärsredovisningen</h2>
-                <i class="fa-solid fa-book editions-icon"></i>
-                <p>Arvidsson, Per...</p>
-                <p>3 versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></p>
-            </a>
-            <a href="" class="title">
-                <h2>Den nya affärsredovisningen</h2>
-                <i class="fa-solid fa-book editions-icon"></i>
-                <p>Efternamn, Förnamn</p>
-                <p>X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></p>
-            </a>
+        <div class="right">
+          <div class="dropdown">
+            <button type="button" aria-label="Öppna profilmeny">
+              <i class="fa-regular fa-user"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-            <a href="" class="title">
-                <h2>Den nya affärsredovisningen</h2>
-                <i class="fa-solid fa-book editions-icon"></i>
-                <p>Efternamn, Förnamn</p>
-                <p>X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></p>
-            </a>
-             <a href="" class="title">
-                <h2>Den nya affärsredovisningen</h2>
-                <i class="fa-solid fa-book editions-icon"></i>
-                <p>Efternamn, Förnamn</p>
-                <p>X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i></p>
-            </a>
+    <div id="search-and-filter">
+      <form class="search">
+        <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." name="search"
+          onblur="upperCase()" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
 
-        </section>
+      <div class="active-filters">
+        <button class="active-button" id="onsite" type="button" aria-label="">
+          "På plats"<i class="fa-solid fa-square-xmark"></i>
+        </button>
+        <button class="active-button" id="online" type="button" aria-label="">
+          "Online"<i class="fa-solid fa-square-xmark"></i>
+        </button>
+        <button class="active-button" id="sv" type="button" aria-label="">
+          "Svenska"<i class="fa-solid fa-square-xmark"></i>
+        </button>
+        <button class="active-button" id="en" type="button" aria-label="">
+          "Engelska"<i class="fa-solid fa-square-xmark"></i>
+        </button>
+      </div>
 
-        <footer>
-            <div class="footer-text">
-                <p>Umeå Universitet</p>
-                <p>901 87 Umeå</p>
-                <a href="contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
-            </div>
-            <div class="footer-icons">
-                <a href="https://www.facebook.com/umeauniversitet?locale=sv_SE" aria-label="Facebook">Facebook <i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/umeauniversitet/" aria-label="Instagram">Instagram <i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/school/umea-universitet/" aria-label="LinkedIn">LinkedIn <i
-                        class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </footer>
-    </main>
+      <div class="dropdown" id="filter-menu">
+        <button class="filter-button" type="button" aria-label="Filtrera sökresultat">
+          <i class="fa-solid fa-sliders"></i>Filtrera
+        </button>
+
+        <form id="filter-form">
+          <ul class="dropdown-content" id="filter-content">
+            <li class="inner-filter-menu">
+              <button type="button">Tillgänglighet<i class="fa-solid fa-angle-down"></i></button>
+              <ul class="inner-filter-content">
+                <li>
+                  <label>
+                    <input type="checkbox" name="availability" value="onsite" />
+                    På plats
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="availability" value="online" />
+                    Online
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="inner-filter-menu">
+              <button type="button">Språk<i class="fa-solid fa-angle-down"></i></button>
+              <ul class="inner-filter-content">
+                <li>
+                  <label>
+                    <input type="checkbox" name="language" value="sv" />
+                    Svenska
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="language" value="en" />
+                    Engelska
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="inner-filter-menu">
+              <input id="filter-submit" type="submit" value="Spara">
+            </li>
+
+          </ul>
+        </form>
+      </div>
+    </div>
+
+    <section id="items">
+      <a href="Titlar/title.html" class="title">
+        <h2>Den nya affärsredovisningen</h2>
+        <i class="fa-solid fa-book editions-icon"></i>
+        <p>Arvidsson, Per...</p>
+        <p>
+          3 versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i>
+        </p>
+      </a>
+      <a href="" class="title">
+        <h2>Den nya affärsredovisningen</h2>
+        <i class="fa-solid fa-book editions-icon"></i>
+        <p>Efternamn, Förnamn</p>
+        <p>
+          X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i>
+        </p>
+      </a>
+
+      <a href="" class="title">
+        <h2>Den nya affärsredovisningen</h2>
+        <i class="fa-solid fa-book editions-icon"></i>
+        <p>Efternamn, Förnamn</p>
+        <p>
+          X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i>
+        </p>
+      </a>
+      <a href="" class="title">
+        <h2>Den nya affärsredovisningen</h2>
+        <i class="fa-solid fa-book editions-icon"></i>
+        <p>Efternamn, Förnamn</p>
+        <p>
+          X versioner finns. Se alla<i class="fa-solid fa-angle-right arrow-icon"></i>
+        </p>
+      </a>
+    </section>
+
+    <footer>
+      <div class="footer-text">
+        <p>Umeå Universitet</p>
+        <p>901 87 Umeå</p>
+        <a href="contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/umeauniversitet?locale=sv_SE" aria-label="Facebook">Facebook <i
+            class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/umeauniversitet/" aria-label="Instagram">Instagram <i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/school/umea-universitet/" aria-label="LinkedIn">LinkedIn <i
+            class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

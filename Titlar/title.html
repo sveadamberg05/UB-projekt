@@ -9,18 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
 
 </head>
 
-<body>
+<body onload="randomizeAvailability()">
     <main class="main">
         <header>
             <nav>
                 <div class="left">
-                    <div class="dropdown">
-                        <button type="button" aria-label="Öppna meny"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dropdown" id="hamburger-menu">
+                        <button type="button" aria-label="Öppna meny">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
                         <ul class="dropdown-content" id="hamburger-content">
                             <li><a href="../Meny/account.html">Mitt konto</a></li>
                             <li><a href="../Meny/loans.html">Mina lån</a></li>
@@ -30,60 +31,90 @@
                     <div class="vertical-line"></div>
                     <h1 class="main-text"><a href="../index.html">Bibliotek</a></h1>
                 </div>
-
                 <a href="../index.html"><img id="logo" src="../Bilder/umu_logga-modified.png"
-                        alt="Umeå Universitet Logga"></a>
-
+                        alt="Umeå Universitet Logga" /></a>
                 <div class="right">
                     <div class="dropdown">
-                        <button type="button" aria-label="Öppna profilmeny"><i class="fa-regular fa-user"></i></button>
+                        <button type="button" aria-label="Öppna profilmeny">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
                     </div>
                 </div>
             </nav>
         </header>
 
-        <div id="breadcrumb">
-            <a href="../index.html"><p class="prev">Resultat</p></a><i class="fa-solid fa-angle-right"></i>
-            <p>Upplagor</p>
-        </div>
-
-        <div id="search-and-filter"> <!-- funktions får lösas sen med javascript-->
-            <form class="search"> <!-- formulär utan action -->
-                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." name="search">
+        <div id="search-and-filter">
+            <form class="search">
+                <input type="text" placeholder="Sök böcker, artiklar, avhandlingar med mera..." name="search"
+                    onblur="upperCase()" />
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
 
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"Svenska"<i
-                        class="fa-solid fa-square-xmark"></i></button>
-            </div>
-            <div class="active-filters"><button class="search-filter-button" type="button" aria-label="">"På plats"<i
-                        class="fa-solid fa-square-xmark"></i></button></div>
-
-            <div class="dropdown">
-                <button class="search-filter-button" type="button" aria-label="Filtrera sökresultat"><i
-                        class="fa-solid fa-sliders"></i>Filtrera</button>
-                <ul class="dropdown-content" id="filter-content">
-
-                    <li class="filter-dropdown">
-                        <button>Tillgänglighet<i class="fa-solid fa-angle-down"></i></button>
-                        <ul class="filter-inner-dropdown-content">
-                            <li><label><input type="checkbox">På plats</label></li>
-                            <li><label><input type="checkbox">Online</label></li>
-                        </ul>
-                    </li>
-
-                    <li class="filter-dropdown">
-                        <button>Språk<i class="fa-solid fa-angle-down"></i></button>
-                        <ul class="filter-inner-dropdown-content">
-                            <li><label><input type="checkbox">Svenska</label></li>
-                            <li><label><input type="checkbox">Engelska</label></li>
-                        </ul>
-                    </li>
-
-
-                </ul>
+            <div class="active-filters">
+                <button class="active-button" id="onsite" type="button" aria-label="">
+                    "På plats"<i class="fa-solid fa-square-xmark"></i>
+                </button>
+                <button class="active-button" id="online" type="button" aria-label="">
+                    "Online"<i class="fa-solid fa-square-xmark"></i>
+                </button>
+                <button class="active-button" id="sv" type="button" aria-label="">
+                    "Svenska"<i class="fa-solid fa-square-xmark"></i>
+                </button>
+                <button class="active-button" id="en" type="button" aria-label="">
+                    "Engelska"<i class="fa-solid fa-square-xmark"></i>
+                </button>
             </div>
 
+            <div class="dropdown" id="filter-menu">
+                <button class="filter-button" type="button" aria-label="Filtrera sökresultat">
+                    <i class="fa-solid fa-sliders"></i>Filtrera
+                </button>
+
+                <form id="filter-form">
+                    <ul class="dropdown-content" id="filter-content">
+                        <li class="inner-filter-menu">
+                            <button type="button">Tillgänglighet<i class="fa-solid fa-angle-down"></i></button>
+                            <ul class="inner-filter-content">
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="availability" value="onsite" />
+                                        På plats
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="availability" value="online" />
+                                        Online
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="inner-filter-menu">
+                            <button type="button">Språk<i class="fa-solid fa-angle-down"></i></button>
+                            <ul class="inner-filter-content">
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="language" value="sv" />
+                                        Svenska
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="language" value="en" />
+                                        Engelska
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="inner-filter-menu">
+                            <input id="filter-submit" type="submit" value="Spara">
+                        </li>
+
+                    </ul>
+                </form>
+            </div>
         </div>
 
         <section id="items">
@@ -91,21 +122,21 @@
                 <div class="edition">
                     <div class="image"><img src="../Bilder/upplaga22.jpg" alt="Upplaga 22"></div>
                     <h2>Upplaga 22 - Den nya affärsredovisningen</h2>
-                    <p class="available"><i class="fa-solid fa-circle-check"></i>Tillgänglig</p>
+                    <p class="book"></p>
                 </div>
             </a>
             <a href="../Upplagor/upplaga21.html">
                 <div class="edition">
                     <div class="image"><img src="../Bilder/upplaga21.jpg" alt="Upplaga 21"></div>
                     <h2>Upplaga 21 - Den nya affärsredovisningen</h2>
-                    <p class="non-available"><i class="fa-solid fa-circle-xmark"></i>Utlånad</p>
+                    <p class="book"></p>
                 </div>
             </a>
             <a href="../Upplagor/upplaga20.html">
                 <div class="edition">
                     <div class="image"><img src="../Bilder/upplaga20.jpg" alt="Upplaga 20"></div>
                     <h2>Upplaga 20 - Den nya affärsredovisningen</h2>
-                    <p class="non-available"><i class="fa-solid fa-circle-xmark non-available"></i>Utlånad</p>
+                    <p class="book"></p>
                 </div>
             </a>
         </section>
@@ -116,7 +147,7 @@
                 <p>901 87 Umeå</p>
                 <a href="../contact.html">Kontakta Oss<i class="fa-solid fa-angle-right"></i></a>
             </div>
-           <div class="footer-icons">
+            <div class="footer-icons">
                 <a href="https://www.facebook.com/umeauniversitet?locale=sv_SE" aria-label="Facebook">Facebook <i
                         class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/umeauniversitet/" aria-label="Instagram">Instagram <i
@@ -126,6 +157,9 @@
             </div>
         </footer>
     </main>
+    <script src="../randomizer.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
