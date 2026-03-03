@@ -44,7 +44,7 @@ main {
 section,
 #search-and-filter,
 #breadcrumb,
-.video {
+#video {
     padding: 0 1em;
 }
 
@@ -561,12 +561,13 @@ textarea,
     margin: 0.5em 0 1em 0;
 }
 
+#sort-area {
+    list-style: none;
+}
 #message {
     height: 8em;
     font-family: inherit;
 }
-
-
 
 .contact input[type=submit] {
     padding: 1em;

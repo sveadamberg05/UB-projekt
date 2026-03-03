@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7b7fa8ee5e.js" crossorigin="anonymous"></script>
-
-    <!-- script för att hämta hem ikoner, ingen egenskriven js funktion-->
-
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -52,31 +52,34 @@
             <p>Kontakta oss</p>
         </div>
 
-        <div class="video">
-            <video controls width="400" autoplay muted>
+        <div id="drop-area">
+            <video id="video" controls width="400" autoplay muted>
                 <source src="Bilder/video.mp4" type="video/mp4">
             </video>
         </div>
 
         <section>
-            <form action="mailto:svea.damberg05@gmail.com" method="get">
+            <form id="contact" action="mailto:svea.damberg05@gmail.com" method="get">
                 <h2>Kontakta oss</h2>
-                <label for="fname">Förnamn</label>
-                <input type="text" id="fname" name="fname" placeholder="Förnamn" required>
+                <ul id="sort-area">
+                    <li><label for="fname">Förnamn</label>
+                        <input type="text" id="fname" name="fname" placeholder="Förnamn" required>
+                    </li>
+                    <li>
+                        <label for="lname">Efternamn</label>
+                        <input type="text" id="lname" name="lname" placeholder="Efternamn">
+                    </li>
 
-                <label for="lname">Efternamn</label>
-                <input type="text" id="lname" name="lname" placeholder="Efternamn">
+                    <li><label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </li>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-
-                <label for="subject">Ämne</label><input type="text" id="subject" name="subject" placeholder="Ämne"
-                    required>
-                <label for="message">Meddelande</label><textarea id="message" name="message" placeholder="Meddelande"
-                    required></textarea>
-
+                    <li><label for="subject">Ämne</label><input type="text" id="subject" name="subject"
+                            placeholder="Ämne" required></li>
+                    <li> <label for="message">Meddelande</label><textarea id="message" name="message"
+                            placeholder="Meddelande" required></textarea></li>
+                <ul>
                 <input type="submit" value="Skicka">
-
             </form>
         </section>
 
@@ -96,7 +99,6 @@
             </div>
         </footer>
     </main>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -67,7 +67,6 @@ $(document).ready(function () {
     $("#filter-form input:checkbox:checked").each(function () {
       $("#" + this.value).show();
     });
-
   })
 
   $(".active-button i").click(function (e) {
@@ -77,4 +76,10 @@ $(document).ready(function () {
     $("#filter-form input[value='" + button.attr("id") + "']").prop("checked", false)
   })
 
+  //uppgift 5
+  $("#video").draggable({
+    containment: "#drop-area"
+  });
+
+  $("#sort-area").sortable();
 });
